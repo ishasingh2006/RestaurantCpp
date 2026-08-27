@@ -1,10 +1,6 @@
 #include<iostream>
 #include<string>
 using namespace std;
-
-class Menu {
-};
-
 class Bill {
     static int nextBillNo;   
     int BILLNO;

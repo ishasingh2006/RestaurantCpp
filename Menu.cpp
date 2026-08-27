@@ -1,20 +1,13 @@
-#include<iostream>
 #include<string>
+#include<iostream>
 using namespace std;
-class Menu{
-    string DISHNAME;
-    string TYPE;
-    int PRICE;
-    bool ISAAVAILABLE;
-    static int TOTALITEM;
-    public:
-    //constructor
-    Menu(){
+#include "MENU.h"
+    Menu::Menu(){
         ++TOTALITEM;
         cout<<"ENTER DISHNAME:";
-        getline(cin,DISHNAME);
+        cin >> DISHNAME;
         cout<<"ENTER TYPE:";
-        getline(cin,TYPE);
+        cin >> TYPE;
         cout<<"ENTER PRICE:";
         cin>>PRICE;
         cout<<"IS THIS ITEM AVAILABLE (Y/N):";
@@ -22,42 +15,37 @@ class Menu{
         cin>>choice;
         (choice=='Y' || choice == 'y')?ISAAVAILABLE = true:ISAAVAILABLE=false;
     }
-    //getter
-     string getDishName() {
-         return DISHNAME; 
+    string Menu::getDishName() {
+         return DISHNAME;
     }
-    string getType() { 
+    string Menu::getType() { 
         return TYPE;
     }
-    int getPrice() {
+    int Menu::getPrice() {
          return PRICE;
     }
-    bool getAvailability() { 
+        bool Menu::getAvailability() { 
         return ISAAVAILABLE;
     }
-    static int getTotalItem() {
+     int Menu:: getTotalItem() {
          return TOTALITEM; 
     }
-    //setter
-     void setDishName( string DishName) {
+    void Menu::setDishName(string DishName) {
        this->DISHNAME = DishName;
      }
-     void setType( string Type ){
+     void Menu:: setType( string Type ){
         this-> TYPE = Type;
      }
-     void setPrice ( int Price ) {
+      void Menu::setPrice ( int Price ) {
         this->PRICE = Price;
      }
-     void setAvailability ( bool Availaible ) {
+     void Menu::setAvailability ( bool Availaible ) {
         this->ISAAVAILABLE = Availaible;
      }
-     //show all the details of Menu
-     void showDetails(){
+     void Menu::showDetails(){
         cout<<"---\n MENU DETAILS ---\n";
         cout<< "DISHNAME:" << DISHNAME <<endl;
         cout<< "TYPE:" << TYPE <<endl;
         cout<< "PRICE:" << PRICE <<endl;
         cout<< "AVAILABLITIY:" << (ISAAVAILABLE == 0 ? "NO" : "YES")<< endl;
      }
-};
-int Menu::TOTALITEM=0;
