@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 using namespace std;
+#include "BIll.h"
 class Bill {
     static int nextBillNo;   
     int BILLNO;
@@ -19,7 +20,7 @@ public:
     }
     //show details
     void show() {
-        cout << "Bill No: " << BILLNO << endl;
+        cout << "Bill No: " << BILLNO << endl; 
         cout << "Customer ID: " << CUSTOMERID << endl;
     }
 };
