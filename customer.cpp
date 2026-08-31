@@ -1,16 +1,10 @@
 #include<iostream>
 #include<string>
 using namespace std;
-class Customer{
-    private:
-    int ID;
-    string NAME;
-    string ADDRESS;
-    int CONTACT;
-    static int TOTALCUSTOMER;
-    public:
+#include"customer.h"
+
     //constructor
-    Customer(){
+    customer::customer(){
         ++TOTALCUSTOMER;
         this->ID = TOTALCUSTOMER;
         cout<<"ENTER NAME:";
@@ -21,30 +15,30 @@ class Customer{
         cin>>CONTACT;
     }
     //getter
-    int getID() { 
+    int customer:: getID() { 
         return ID;
      }
-    string getName() {
+    string customer:: getName() {
          return NAME; 
     }
-    string getAddress() { 
+    string customer:: getAddress() { 
         return ADDRESS;
      }
-    int getContact() { 
+    int customer:: getContact() { 
         return CONTACT;
      }
      //setter
-     void setName(string Name) {
+     void customer::setName(string Name) {
          NAME = Name;
      }
-    void setAddress(string Address) {
+    void customer:: setAddress(string Address) {
          ADDRESS = Address;
      }
-    void setContact(int Contact) {
+    void customer::setContact(int Contact) {
          CONTACT = Contact;
     }
     //Display all details of customer
-    void showDetails() {
+    void customer::showdetails() {
         cout << "\n--- CUSTOMER DETAILS ---\n";
         cout << "ID:" << ID << endl;
         cout << "NAME:" << NAME << endl;
@@ -52,13 +46,7 @@ class Customer{
         cout << "CONTACT:" << CONTACT << endl;
     }
     //static variable
-    static int getTotalCustomer(){
+    int customer::getTotalCustomer(){
         return TOTALCUSTOMER;
     }
-};
-int Customer::TOTALCUSTOMER = 0;
-int main(){
-    Customer C;
-    C.showDetails();
-    return 0;
-}
+int customer::TOTALCUSTOMER = 0;

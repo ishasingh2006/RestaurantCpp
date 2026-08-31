@@ -1,13 +1,8 @@
 #include<iostream>
 #include<string>
 using namespace std;
-class Tables{
-    int TABLENUMBER;
-    unsigned int CAPACITY;
-    int TOTALTABLE;
-    bool ISOOCUPPIED;
-    public:
-    Tables(){
+#include"Tables.h"
+    Tables::Tables(){
     cout<<"ENTER TABLE NUMBER:";
     cin>>TABLENUMBER;
     cout<<"ENTER CAPACITY:";
@@ -20,33 +15,33 @@ class Tables{
         (choice=='Y' || choice == 'y')?ISOOCUPPIED = true:ISOOCUPPIED=false;
     }
     //getter
-    int getTABLENUMBER(){
+    int Tables::getTABLENUMBER(){
         return TABLENUMBER;
     }
-    int getCAPACITY() {
+    int Tables:: getCAPACITY() {
         return CAPACITY;
     }
-    int getTOTALTABLE(){
+    int Tables::getTOTALTABLE(){
         return TOTALTABLE;
     }
-    bool getISOCCUPIED() {
+    bool Tables:: getISOCCUPIED() {
         return ISOOCUPPIED;
     }
     //setter
-    void setTABLENUMBER ( int TABLENUMBER ){
+    void Tables::setTABLENUMBER ( int TABLENUMBER ){
         this->TABLENUMBER = TABLENUMBER;
     }
-    void setCAPACITY ( int CAPACITY ){
+    void Tables::setCAPACITY ( int CAPACITY ){
         this->CAPACITY = CAPACITY;
     }
-    void setTOTALTABLE ( int TOTALTABLE ){
+    void Tables::setTOTALTABLE ( int TOTALTABLE ){
         this->TOTALTABLE = TOTALTABLE;
     }
-    void setISOCCUPIED ( bool ISOCCUPIED ){
+    void Tables::setISOCCUPIED ( bool ISOCCUPIED ){
         this->ISOOCUPPIED=ISOCCUPIED;
     }
     //show all the details of tables
-    void showdetails(){
+    void Tables:: showdetails(){
         cout<<"----\n TABLES DETAILS ----\n";
         cout<< "TABLENUMBER: " << TABLENUMBER <<endl;
         cout<< "CAPACITY:" << CAPACITY <<endl;
@@ -54,5 +49,4 @@ class Tables{
         cout<< "ISOCCUPIED:" << (ISOOCUPPIED == 0 ? "NO" : "YES")<< endl;
     }
 
-};
 
