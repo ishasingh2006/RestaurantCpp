@@ -1,12 +1,11 @@
 
-#ifndef BILL_H
 #define BILL_H
 
 #include <iostream>
 #include <string>
 using namespace std;
-
-// Forward declaration of Menu class (agar alag se define kiya hai)
+#include"MENU.h"
+// Forward declaration of Menu class
 class Menu;
 
 class Bill {
@@ -21,5 +20,3 @@ public:
     void readCustomerID();   // function to take input
     void show();             // function to display details
 };
-
-#endif
