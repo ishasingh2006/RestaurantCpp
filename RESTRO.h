@@ -1,10 +1,11 @@
 #ifndef RESTAURANT_H
 #define RESTAURANT_H
+
 #include <string>
-#include "Table.h"
-#include "Menu.h"
-#include "Customer.h"
-#include "Bill.h"
+#include "Tables.h"
+#include "MENU.h"
+#include "customer.h"
+#include "BIll.h"
 using namespace std;
 
 #define MAX_TABLES 50
@@ -15,8 +16,8 @@ class Restaurant {
     string name;
     string founder;
     Menu menu;
-    Table tables[MAX_TABLES];
-    Customer customers[MAX_CUSTOMERS];
+    Tables tables[MAX_TABLES];
+    customer customers[MAX_CUSTOMERS];
     Bill bills[MAX_BILLS];
 
     int tableCount;
@@ -26,8 +27,8 @@ class Restaurant {
 public:
     Restaurant(string n, string f);
     void showDetails();
-    void addCustomer(Customer c);
-    void addTable(Table t);
-    void generateBill(Customer c);
+    void addCustomer(customer c);
+    void addTable(Tables t);
+    void generateBill(customer c);
 };
 #endif

@@ -1,22 +1,22 @@
 
+#ifndef BILL_H
 #define BILL_H
 
 #include <iostream>
 #include <string>
 using namespace std;
-#include"MENU.h"
-// Forward declaration of Menu class
-class Menu;
+#include "MENU.h"
 
 class Bill {
-    static int nextBillNo;   // static member
+    static int nextBillNo;
     int BILLNO;
     int CUSTOMERID;
-    Menu items[30];          // array of Menu items
+    Menu items[30];
 
 public:
-    Bill(int custID = 0);    // constructor declaration
-
-    void readCustomerID();   // function to take input
-    void show();             // function to display details
+    Bill(int custID = 0);
+    void readCustomerID();
+    void show();
 };
+
+#endif

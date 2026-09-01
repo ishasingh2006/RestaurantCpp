@@ -1,24 +1,31 @@
-#include "Restro.h"
-#include "Customer.h"
-#include "Table.h"
-#include "Menu.h"
-#include "Bill.h"
-class Restro{
-    
-}
+#include <iostream>
+#include "customer.h"
+#include "Tables.h"
+#include "MENU.h"
+#include "BIll.h"
+
+class Restro {
+private:
+    string RESTRONAME;
+    string OWNERNAME;
+
+public:
+    Restro() {
+        cout << "ENTER RESTRO NAME:";
+        getline(cin, RESTRONAME);
+        cout << "ENTER OWNER NAME:";
+        getline(cin, OWNERNAME);
+    }
+
+    void showdetails() {
+        cout << "---- RESTRO DETAILS ----\n";
+        cout << "RESTRONAME: " << RESTRONAME << endl;
+        cout << "OWNERNAME:" << OWNERNAME << endl;
+    }
+};
 
 int main() {
-    Restaurant r("Food Paradise", "Isha");
-
-    r.showDetails();
-
-    Customer c1("Rahul", 1);
-    r.addCustomer(c1);
-
-    Table t1(101, 4);
-    r.addTable(t1);
-
-    r.generateBill(c1);
-
+    Restro r;
+    r.showdetails();
     return 0;
 }
