@@ -42,14 +42,23 @@ public:
             case 1:
                 cout << "\n--- Tables Section ---\n";
                 cout<< "Enter the number of tables: ";
+                cout<<"option 1: Add Table\n";
+                
                 break;
             case 2:
                 cout << "\n--- Menu Section ---\n";    
-                cout << "Enter the number of menu items: ";            
+                cout << "Enter the number of menu items: "; 
+                cout<<"option 1: Add Menu Item\n";
+                cout<<"option 2: Remove Menu Item\n";
+                cout<<"How many items are available in the menu: ";       
+                cout<<"option 3: Display Menu\n";
+                cout<<"How many items you want to order? ";    
                 break;
             case 3:
                 cout << "\n--- Bill Section ---\n";   
-                cout<<"Enter the number of bills: ";             
+                cout<<"Enter the number of bills: ";
+                cout<<"option 1: Generate Bill\n";
+                cout<<"option 2: Display Bill\n";             
                 break;
             case 4:
                 cout << "\nExiting Dashboard... Thank you!\n";
