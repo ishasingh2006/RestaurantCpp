@@ -43,7 +43,10 @@ public:
                 cout << "\n--- Tables Section ---\n";
                 cout<< "Enter the number of tables: ";
                 cout<<"option 1: Add Table\n";
-                
+                cout<<"option 2: How many tables are available: ";
+                cout<<"option 3: Display Tables\n";
+                cout<<"option 4: How many tables are occupied?: ";
+                cout<<"option 5: How many tables are Reserved?: ";  
                 break;
             case 2:
                 cout << "\n--- Menu Section ---\n";    
