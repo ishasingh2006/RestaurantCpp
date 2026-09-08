@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <fstream>
 using namespace std;
 #include "MENU.h"
 
@@ -61,4 +62,18 @@ void Menu::showDetails() {
     cout << "TYPE:" << TYPE << endl;
     cout << "PRICE:" << PRICE << endl;
     cout << "AVAILABLITIY:" << (ISAAVAILABLE == 0 ? "NO" : "YES") << endl;
+}
+void saveToFile(Menu& menu) {
+    ofstream fout("menu.dat", ios::binary | ios::app);
+    fout.write(reinterpret_cast<const char*>(&menu), sizeof(menu));
+    fout.close();
+}
+
+void readFromFile() {
+    ifstream fin("menu.dat", ios::binary);
+    Menu m;
+    while(fin.read(reinterpret_cast<char*>(&m), sizeof(m))) {
+        m.showDetails();
+    }
+    fin.close();
 }
