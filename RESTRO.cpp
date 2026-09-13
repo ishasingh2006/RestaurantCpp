@@ -89,12 +89,64 @@ public:
                     cout << "Enter your choice: ";
                     cin >> tablesChoice;
 
-                    if (tablesChoice = 1) {
-                      
+                     switch (tablesChoice) {
+                        case 1:
+
+                           
+            }switch (tablesChoice) {
+                        case 1: { // Add Table
+                            Table t;
+                            t.id = tables.size() + 1;
+                            t.status = "Available";
+                            tables.push_back(t);
+                            cout << "Table " << t.id << " added successfully!\n";
+                            break;
+                        }
+                        case 2: { // Available count
+                            int count = 0;
+                            for (auto &t : tables)
+                                if (t.status == "Available") count++;
+                            cout << "Available tables: " << count << "\n";
+                            break;
+                        }
+                        case 3: { // Display all tables
+                            cout << "--- Table List ---\n";
+                            for (auto &t : tables)
+                                cout << "Table " << t.id << " - " << t.status << "\n";
+                            break;
+                        }
+                          case 4: { // Occupied count
+                            int count = 0;
+                            for (auto &t : tables)
+                                if (t.status == "Occupied") count++;
+                            cout << "Occupied tables: " << count << "\n";
+                            break;
+                        }
+                        case 5: { // Reserved count
+                            int count = 0;
+                            for (auto &t : tables)
+                                if (t.status == "Reserved") count++;
+                            cout << "Reserved tables: " << count << "\n";
+                            break;
+                        }
+                        case 6:
+                            cout << "Exiting Tables Section...\n";
+                            break;
+                        default:
+                            cout << "Invalid choice!\n";
                     }
                 } while (tablesChoice != 6);
                 break;
-            }
+                  case 2:
+                cout << "Exiting program...\n";
+                break;
+            default:
+                cout << "Invalid choice!\n";
+        }
+    } while (choice != 2);
+
+    return 0;
+}
             case 2: {
                 int menuChoice = 0;
                 do {
