@@ -89,53 +89,6 @@ public:
                     cout << "Enter your choice: ";
                     cin >> tablesChoice;
 
-<<<<<<< HEAD
-                     switch (tablesChoice) {
-                        case 1:
-
-                           
-            }switch (tablesChoice) {
-                        case 1: { // Add Table
-                            Table t;
-                            t.id = tables.size() + 1;
-                            t.status = "Available";
-                            tables.push_back(t);
-                            cout << "Table " << t.id << " added successfully!\n";
-                            break;
-                        }
-                        case 2: { // Available count
-                            int count = 0;
-                            for (auto &t : tables)
-                                if (t.status == "Available") count++;
-                            cout << "Available tables: " << count << "\n";
-                            break;
-                        }
-                        case 3: { // Display all tables
-                            cout << "--- Table List ---\n";
-                            for (auto &t : tables)
-                                cout << "Table " << t.id << " - " << t.status << "\n";
-                            break;
-                        }
-                          case 4: { // Occupied count
-                            int count = 0;
-                            for (auto &t : tables)
-                                if (t.status == "Occupied") count++;
-                            cout << "Occupied tables: " << count << "\n";
-                            break;
-                        }
-                        case 5: { // Reserved count
-                            int count = 0;
-                            for (auto &t : tables)
-                                if (t.status == "Reserved") count++;
-                            cout << "Reserved tables: " << count << "\n";
-                            break;
-                        }
-                        case 6:
-                            cout << "Exiting Tables Section...\n";
-                            break;
-                        default:
-                            cout << "Invalid choice!\n";
-=======
                     if (tablesChoice = 1) {
                       //create object of table class
                       //automatically call the constructor of table class
@@ -154,20 +107,10 @@ public:
                       //read the data from file using readDataFromFile function of Restro class
                       //check the availability of tables 
                       //list all occupied tables and display the count of occupied tables
->>>>>>> 6aa4549cbd2f8ce0833dee6950d2cc4af19542a0
                     }
                 } while (tablesChoice != 6);
                 break;
-                  case 2:
-                cout << "Exiting program...\n";
-                break;
-            default:
-                cout << "Invalid choice!\n";
-        }
-    } while (choice != 2);
-
-    return 0;
-}
+            }
             case 2: {
                 int menuChoice = 0;
                 do {
