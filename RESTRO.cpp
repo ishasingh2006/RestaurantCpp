@@ -89,24 +89,26 @@ public:
                     cout << "Enter your choice: ";
                     cin >> tablesChoice;
 
-                    if (tablesChoice = 1) {
-                      //create object of table class
-                      //automatically call the constructor of table class
-                      //save the data to file using saveDataToFile function of Restro class
-                      //msg "Table added successfully"
-                    }else if (tablesChoice = 2) {
-                      //create object of table class
-                      //read the data from file using readDataFromFile function of Restro class
-                      //count the number of available tables and display it  
-                    }else if (tablesChoice = 3) {
-                      //create object of table class
-                      //read the data from file using readDataFromFile function of Restro class
-                      //display the details of all tables
-                    }else if (tablesChoice = 4) {
-                      //create object of table class
-                      //read the data from file using readDataFromFile function of Restro class
-                      //check the availability of tables 
-                      //list all occupied tables and display the count of occupied tables
+                    if (tablesChoice == 1) {
+                        // create object of table class
+                        // automatically call the constructor of table class
+                        // save the data to file using saveDataToFile function of Restro class
+                        // msg "Table added successfully
+                    } else if (tablesChoice == 2) {
+                        // create object of table class
+                        // read the data from file using readDataFromFile function of Restro class
+                        // count the number of available tables and display it
+                    } else if (tablesChoice == 3) {
+                        // create object of table class
+                        // read the data from file using readDataFromFile function of Restro class
+                        // display the details of all tables
+                    } else if (tablesChoice == 4) {
+                        // create object of table class
+                        // read the data from file using readDataFromFile function of Restro class
+                        // check the availability of tables
+                        // list all occupied tables and display the count of occupied tables
+                    } else if (tablesChoice < 1 || tablesChoice > 6) {
+                        cout << "Invalid choice.\n";
                     }
                 } while (tablesChoice != 6);
                 break;
