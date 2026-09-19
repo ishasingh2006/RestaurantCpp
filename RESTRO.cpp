@@ -77,7 +77,6 @@ public:
             switch (choice) {
             case 1: {
                 int tablesChoice = 0;
-                Tables r;
                 do {
                     cout << "\n--- Tables Section ---\n";
                     cout << "Total number of tables in the restaurant xxx\n";
@@ -91,28 +90,32 @@ public:
                     cin >> tablesChoice;
 
                     if (tablesChoice == 1) {
-                        int id; string status;
+                        // create object of table class & call constructor
+                      int id; string status;
                        cout << "Enter Table ID: "; cin >> id;
-                       cout << "Enter Status (Available/Occupied/Reserved): "; cin >> status;
-                       Tables t;
-                       t.saveTable(); // save the data to file using Restro class function
-                       cout << "Table added successfully!\n";
+                      cout << "Enter Status (Available/Occupied/Reserved): "; cin >> status;
+                     Table t(id, status); 
+                      r.addTable(id, status);  
+                      cout << "Table added successfully!\n";
                         // create object of table class
                         // automatically call the constructor of table class
                         // save the data to file using saveDataToFile function of Restro class
                         // msg "Table added successfully
                     } else if (tablesChoice == 2) {
-                         r.countAvailable();
+                         Restro r;           
+                        r.countAvailable();    
                         // create object of table class
                         // read the data from file using readDataFromFile function of Restro class
                         // count the number of available tables and display it
                     } else if (tablesChoice == 3) {
-                         r.displayTables();
+                        Restro r;              
+                       r.displayTables();
                         // create object of table class
                         // read the data from file using readDataFromFile function of Restro class
                         // display the details of all tables
                     } else if (tablesChoice == 4) {
-                        r.countOccupied();
+                         Restro r;              
+                          r.countOccupied();  
                         // create object of table class
                         // read the data from file using readDataFromFile function of Restro class
                         // check the availability of tables
